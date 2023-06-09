@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h3><b> To do README</b></h3>
+  <h3><b> Bookstore README</b></h3>
 
 </div>
 
@@ -26,10 +26,16 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 About the Project <a name="about-project"></a>
+# 📖 Leaderboard <a name="about-project"></a>
 
 
-Todo, is an application build in react that can help people setup their task, mark when it's completed, for better management of journey
+The Bookstore is a website similar to the "Awesome Books" website built previously.
+
+You will create an simplified version of it that allows you to:
+
+Display a list of books
+Add a book
+Remove a selected book
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -55,7 +61,7 @@ Todo, is an application build in react that can help people setup their task, ma
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- not available yet (but comming soon)
+- not available yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,8 +80,7 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
-git clone https://github.com/francksefu/td-react.git
-
+git clone https://github.com/francksefu/books-react-reducs.git
 
 ### Usage
 
