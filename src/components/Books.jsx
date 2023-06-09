@@ -7,7 +7,7 @@ const Books = ({ books }) => (
       <div>
         <h4 className="School-of">{books.type}</h4>
         <h2 className="Title">{books.title}</h2>
-        <small className="Suzanne-Collins">author</small>
+        <small className="Suzanne-Collins">{books.author}</small>
       </div>
       <div>
         <button type="button" className="Comments">Comments</button>
