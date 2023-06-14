@@ -9,7 +9,7 @@ const Books = ({ books }) => {
     <li className="Lesson-Panel">
       <div>
         <div>
-          <h4 className="School-of">{books.type}</h4>
+          <h4 className="School-of">{books.category}</h4>
           <h2 className="Title">{books.title}</h2>
           <small className="Suzanne-Collins">{books.author}</small>
         </div>
@@ -17,7 +17,7 @@ const Books = ({ books }) => {
           <button type="button" className="Comments">Comments</button>
           {' '}
           |
-          <button type="button" onClick={() => dispatch(removes(books.id))} className="Remove">Remove</button>
+          <button type="button" onClick={() => dispatch(removes(books))} className="Remove">Remove</button>
           {' '}
           |
           <button type="button" className="Edit">Edit</button>
