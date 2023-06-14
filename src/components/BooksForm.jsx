@@ -10,11 +10,13 @@ const BooksForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
-      dispatch(adding({
-        id: uuidv4, title, author, completed: false, type: 'action',
-      }));
+      let obj = {
+        item_id: uuidv4(), title, author, completed: false, category: 'action',
+      };
+      dispatch(adding(obj));
       document.getElementById('title').value = '';
       document.getElementById('author').value = '';
+      obj = {};
     } else {
       message = 'nothing';
     }
