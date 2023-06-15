@@ -63,6 +63,7 @@ button {
   color: #4386bf;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .Comments {

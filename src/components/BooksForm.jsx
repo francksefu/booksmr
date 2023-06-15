@@ -1,22 +1,23 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { adding } from '../redux/books/booksSlice';
+import { getbook, sendbook } from '../redux/books/booksSlice';
 
 const BooksForm = () => {
   const dispatch = useDispatch();
   let title = '';
   let author = '';
   let message = '';
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
       let obj = {
         item_id: uuidv4(), title, author, completed: false, category: 'action',
       };
-      dispatch(adding(obj));
+      await dispatch(sendbook(obj));
       document.getElementById('title').value = '';
       document.getElementById('author').value = '';
       obj = {};
+      await dispatch(getbook());
     } else {
       message = 'nothing';
     }
