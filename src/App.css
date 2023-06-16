@@ -7,6 +7,7 @@ body {
   height: 109.625rem;
   padding: 9.313rem 3.75rem 7.688rem 6.25rem;
   background-color: #f5f6fa;
+  overflow-x: hidden;
 }
 
 .panel-bg {
@@ -357,4 +358,6 @@ button {
   height: 2.813rem;
 }
 
-
+ul {
+  list-style-type: none;
+}
