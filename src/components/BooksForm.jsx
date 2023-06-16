@@ -5,8 +5,7 @@ import { getbook, sendbook } from '../redux/books/booksSlice';
 const BooksForm = () => {
   const dispatch = useDispatch();
   let title = '';
-  let author = '';
-  let message = '';
+  const author = 'franck';
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
@@ -15,11 +14,8 @@ const BooksForm = () => {
       };
       await dispatch(sendbook(obj));
       document.getElementById('title').value = '';
-      document.getElementById('author').value = '';
       obj = {};
       await dispatch(getbook());
-    } else {
-      message = 'nothing';
     }
   };
 
@@ -27,12 +23,8 @@ const BooksForm = () => {
     title = (e.target.value);
   };
 
-  const handleChange2 = (e) => {
-    author = (e.target.value);
-  };
-
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Add books title"
@@ -41,15 +33,10 @@ const BooksForm = () => {
         id="title"
       />
 
-      <input
-        type="text"
-        placeholder="Add books author"
-        className="I-Lesson-Panel"
-        onChange={handleChange2}
-        id="author"
-      />
-      <small>{message}</small>
-      <button type="button" className="Rectangle-2" onClick={handleSubmit}>Submit</button>
+      <select className="select">
+        <option selected>Category</option>
+      </select>
+      <button className="send" type="submit"><span className="inner">ADD BOOK</span></button>
     </form>
   );
 };
