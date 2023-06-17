@@ -3,7 +3,7 @@ import BooksList from './BooksList';
 import imagete from '../imagete.png';
 
 const BooksRender = () => (
-  <>
+  <div className="prend">
     <div className="panel-bg">
       <div className="bar-panel-bg">
         <div>
@@ -19,6 +19,6 @@ const BooksRender = () => (
       <div className="Line-bas" />
       <BooksForm />
     </div>
-  </>
+  </div>
 );
 export default BooksRender;
