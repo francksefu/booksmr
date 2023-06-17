@@ -5,7 +5,7 @@ import { getbook, sendbook } from '../redux/books/booksSlice';
 const BooksForm = () => {
   const dispatch = useDispatch();
   let title = '';
-  let author = '';
+  const author = 'franck';
   let message = '';
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +15,6 @@ const BooksForm = () => {
       };
       await dispatch(sendbook(obj));
       document.getElementById('title').value = '';
-      document.getElementById('author').value = '';
       obj = {};
       await dispatch(getbook());
     } else {
@@ -27,29 +26,22 @@ const BooksForm = () => {
     title = (e.target.value);
   };
 
-  const handleChange2 = (e) => {
-    author = (e.target.value);
-  };
-
   return (
     <form>
+      <h3 className="Title-addbook">ADD NEW BOOK</h3>
       <input
         type="text"
-        placeholder="Add books title"
-        className="I-Lesson-Panel"
+        placeholder="Book Title"
+        className="Lesson-Panel-Book"
         onChange={handleChange1}
         id="title"
       />
+      <select className="Lesson-Panel-select">
+        <option value="Categories">Categories</option>
+      </select>
 
-      <input
-        type="text"
-        placeholder="Add books author"
-        className="I-Lesson-Panel"
-        onChange={handleChange2}
-        id="author"
-      />
       <small>{message}</small>
-      <button type="button" className="Rectangle-2" onClick={handleSubmit}>Submit</button>
+      <button type="button" className="Rectangle-2-sub" onClick={handleSubmit}><span className="Add-B">ADD BOOK</span></button>
     </form>
   );
 };

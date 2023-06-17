@@ -26,7 +26,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Leaderboard <a name="about-project"></a>
+# 📖 Books store <a name="about-project"></a>
 
 
 The Bookstore is a website similar to the "Awesome Books" website built previously.
